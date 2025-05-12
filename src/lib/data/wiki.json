@@ -1,0 +1,18 @@
+{
+  "articles": [
+    {
+      "title": "Getting Started",
+      "slug": "getting-started",
+      "content": "This is the getting started guide for our wiki system.",
+      "keywords": ["introduction", "basics"],
+      "lastUpdated": "2023-11-15"
+    },
+    {
+      "title": "API Documentation",
+      "slug": "api-docs",
+      "content": "Detailed documentation for our API endpoints.",
+      "keywords": ["development", "api"],
+      "lastUpdated": "2023-11-10"
+    }
+  ]
+}

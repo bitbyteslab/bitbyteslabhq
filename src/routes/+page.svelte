@@ -1,11 +1,12 @@
 <script>
     import { onMount } from 'svelte';
     import Header from '$lib/components/Header.svelte';
-    import Footer from '$lib/components/Footer.svelte';
+    import Footer from '$lib/components/footer/Footer.svelte';
     import HomeServices from './Home_Services.svelte';
     import HomeBlogs from './Home_Blogs.svelte';
     import HomeContactUs from './Home_ContactUs.svelte';
     import HomeAboutUs from './Home_AboutUs.svelte';
+    import ServicesBar from '$lib/components/ServicesBar.svelte';
     import { Carousel, CarouselItem, Card, Button, Row, Col } from "@sveltestrap/sveltestrap";
 
     onMount(() => {
@@ -14,7 +15,9 @@
         dropdownToggle.addEventListener('click', (event) => {
           event.preventDefault();
           const dropdownMenu = dropdownToggle.nextElementSibling;
-          dropdownMenu.classList.toggle('show');
+          if (dropdownMenu) {
+            dropdownMenu.classList.toggle('show');
+          }
           dropdownToggle.setAttribute(
             'aria-expanded',
             dropdownToggle.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'
@@ -50,6 +53,14 @@
   <Header />
   
   <main>
+    <div class="row align-items-center mb-4">
+      <div class="col-auto">
+        <h2 class="display-6 font-weight-bold"><video src="https://cdn-icons-mp4.freepik.com/512/12205/12205141.mp4" autoplay loop muted playsinline style="width: 40px; height: 40px; display: inline-block; vertical-align: middle;"></video> Our Services</h2>
+      </div>
+      <div class="col">
+        <ServicesBar />
+      </div>
+    </div>
     <!-- Hero Section -->
 
 

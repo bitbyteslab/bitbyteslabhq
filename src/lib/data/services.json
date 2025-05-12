@@ -1,0 +1,28 @@
+{
+  "services": [
+    {
+      "name": "Web Development",
+      "children": ["Custom Websites", "E-commerce Solutions", "Web Applications"]
+    },
+    {
+      "name": "Mobile Development",
+      "children": ["iOS Apps", "Android Apps", "Cross-platform Apps"]
+    },
+    {
+      "name": "UI/UX Design",
+      "children": ["Wireframing", "Prototyping", "User Testing"]
+    },
+    {
+      "name": "Digital Marketing",
+      "children": ["SEO", "Social Media", "PPC Advertising"]
+    },
+    {
+      "name": "Cloud Services",
+      "children": ["AWS", "Azure", "Google Cloud"]
+    },
+    {
+      "name": "Consulting",
+      "children": ["IT Strategy", "Digital Transformation", "Tech Audits"]
+    }
+  ]
+}

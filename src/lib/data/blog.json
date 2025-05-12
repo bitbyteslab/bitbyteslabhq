@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "title": "First Blog Post",
+      "slug": "first-post",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..",
+      "excerpt": "This is the content of my first blog post.",
+      "tags": ["introduction", "getting-started"],
+      "keywords": ["SEO", "blog", "introduction"],
+      "categories": ["General", "Getting Started"],
+      "date": "2023-11-20",
+      "author": "Admin"
+    },
+    {
+      "title": "Second Blog Post",
+      "slug": "second-post",
+      "content": "This is another blog post with more content.",
+      "excerpt": "This is another blog post with more content.",
+      "tags": ["development", "updates"],
+      "keywords": ["development", "updates", "blog"],
+      "categories": ["Development", "Updates"],
+      "date": "2023-11-15",
+      "author": "Admin"
+    },
+    {
+      "title": "Modern SvelteKit Patterns",
+      "slug": "modern-sveltekit",
+      "content": "A look at idiomatic SvelteKit and JavaScript for 2024.",
+      "excerpt": "A look at idiomatic SvelteKit and JavaScript for 2024.",
+      "tags": ["sveltekit", "javascript"],
+      "keywords": ["sveltekit", "javascript", "patterns"],
+      "categories": ["Web Development", "SvelteKit"],
+      "date": "2024-06-02",
+      "author": "CTO"
+    },
+    {
+      "title": "Welcome to the New Blog!",
+      "slug": "welcome",
+      "content": "Discover the new BitBytesLab blog, built with SvelteKit.",
+      "excerpt": "Discover the new BitBytesLab blog, built with SvelteKit.",
+      "tags": ["announcement", "sveltekit"],
+      "keywords": ["announcement", "sveltekit", "blog"],
+      "categories": ["Announcements", "SvelteKit"],
+      "date": "2024-06-01",
+      "author": "CTO"
+    }
+  ],
+  "requiredFields": ["title", "slug", "content", "excerpt", "tags", "keywords", "categories", "date", "author"]
+}

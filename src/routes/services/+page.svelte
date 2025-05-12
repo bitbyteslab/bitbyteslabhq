@@ -1,51 +1,33 @@
 <script>
     import { Card, Button, Row, Col , Badge , CardBody } from "@sveltestrap/sveltestrap";
     import Header from '$lib/components/Header.svelte';
-    import Footer from '$lib/components/Footer.svelte';
-    // Services Data
-    const services = [
-      {
-        title: "Website Development",
-        description: "Custom website development tailored to your needs.",
-        icon: "bi bi-code-slash",
-      },
-      {
-        title: "SEO Optimization",
-        description: "Improve your search engine ranking with our SEO services.",
-        icon: "bi bi-search",
-      },
-      {
-        title: "ERP Solutions",
-        description: "Enterprise Resource Planning solutions to streamline your business.",
-        icon: "bi bi-gear",
-      },
-      {
-        title: "CRM Solutions",
-        description: "Customer Relationship Management to enhance customer engagement.",
-        icon: "bi bi-people",
-      },
-      {
-        title: "Business Emails",
-        description: "Professional business email solutions.",
-        icon: "bi bi-envelope",
-      },
-      {
-        title: "Node.js Development",
-        description: "Scalable and efficient Node.js application development.",
-        icon: "bi bi-node",
-      },
-      {
-        title: "Web Scraping",
-        description: "Data extraction services to gather valuable information.",
-        icon: "bi bi-database",
-      },
-      {
-        title: "Web Hosting",
-        description: "Reliable web hosting solutions for your website.",
-        icon: "bi bi-hdd",
-      },
+    import Footer from '$lib/components/footer/Footer.svelte';
+    // Dynamically generated services from subfolders
+    const serviceFolders = [
+      "best-website-designing-companies-in-india-for-small-business",
+      "best-website-designing-company-delhi-india",
+      "best-wordpress-website-designing-company-in-delhi-ncr",
+      "custom-web-application-development-services-in-india-using-nodejs",
+      "custom-wordpress-website-designing-services-in-noida",
+      "popular-internet-website-designers-in-delhi",
+      "professional-website-development-services-hire-website-developers",
+      "responsive-website-design-packages-in-india-mobile-friendly-websites",
+      "responsive-website-designing-services-in-india",
+      "top-rated-web-design-agency-in-india-award-winning-website-design-portfolio",
+      "top-web-development-companies-in-india-for-startups",
+      "top-website-designing-companies-in-delhi-near-me",
+      "website-design-services-in-delhi-custom-website-design-company",
+      "wordpress-ecommerce-website-development-services-in-india",
+      "wordpress-plugin-development-services-in-delhi",
+      "wordpress-website-migration-services-to-http-https",
+      "wordpress-website-troubleshooting-and-maintenance-services"
     ];
-  
+    const services = serviceFolders.map(folder => ({
+      title: folder.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+      description: `Learn more about our ${folder.replace(/-/g, ' ')} service.`,
+      icon: "bi bi-briefcase",
+      link: `/services/${folder}`
+    }));
     // SEO Keywords
     const seoKeywords = {
       "Web Services": [
@@ -80,11 +62,11 @@
     <title>Our Services - BitBytesLab</title>
     <meta
       name="description"
-      content="Explore our wide range of services including Website Development, SEO Optimization, ERP Solutions, CRM Solutions, Business Emails, Node.js Development, Web Scraping, and Web Hosting."
+      content="Explore our wide range of services including Website Development, SEO Optimization, ERP Solutions, CRM Services, Business Emails, Node.js Development, Web Scraping, and Web Hosting."
     />
     <meta
       name="keywords"
-      content="Website Development, SEO Optimization, ERP Solutions, CRM Solutions, Business Emails, Node.js Development, Web Scraping, Web Hosting, BitBytesLab"
+      content="Website Development, SEO Optimization, ERP Solutions, CRM Services, Business Emails, Node.js Development, Web Scraping, Web Hosting, BitBytesLab"
     />
   </svelte:head>
   
@@ -111,7 +93,7 @@
                   <i class={`${service.icon} display-4 text-primary mb-3`}></i>
                   <h3 class="h5">{service.title}</h3>
                   <p class="text-muted">{service.description}</p>
-                  <Button color="primary" outline>Learn More</Button>
+                  <Button color="primary" outline href={service.link}>Learn More</Button>
                 </CardBody>
               </Card>
             </Col>
